@@ -22,21 +22,21 @@ import datetime
 import math
 
 def xkcdate(percentage_complete):
+    """ Returns the percetange completed, either as a date or a year"""
     today = datetime.date.today()
     completion = percentage_complete / 100
     days = float(365.25 * (math.exp(3+20.3444*(completion)**3) - math.exp(3)))
     try:
-	date = (today - datetime.timedelta(days)).strftime("%A, %d %B %Y")
+        date = (today - datetime.timedelta(days)).strftime("%A, %d %B %Y")
     except:
         dateval = datetime.datetime.today().year - int(days / 365.25)
-	if dateval < 0:
-	    dateval = 0 - dateval
-	    adbc = " BC"
-	else:
-	    adbc = " AD"
-	date = str(dateval) + adbc
+        if dateval < 0:
+            dateval = 0 - dateval
+            adbc = " BC"
+        else:
+            adbc = " AD"
+            date = str(dateval) + adbc
 
-    
     return date
 
 if __name__ == "__main__":
