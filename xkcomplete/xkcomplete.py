@@ -35,7 +35,7 @@ def xkcdate(percentage_complete):
             adbc = " BC"
         else:
             adbc = " AD"
-            date = str(dateval) + adbc
+        date = str(dateval) + adbc
 
     return date
 
