@@ -2,6 +2,22 @@ Silliness
 =========
 A repository of short scripts that amused me at some point - or still do
 
+Dicetastic
+----------
+A simple dice-rolling application.
+
+    Dicelib
+    -------
+    This is the dice library used by Dicetastic. 
+    
+    Class Dice has the following methods:
+    - set_sides sets the number of sides of each die to be rolled (default is 6)
+    - get_sides returns the number of sides of each die to be rolled
+    - set_count sets the number of dice to be rolled (default is 1)
+    - get_count returns the number of dice to be rolled
+    - roll_dice rolls the dice and returns the results as a list.
+
+
 XKComplete
 ----------
 An extreme waiting application inspired by XKCD
