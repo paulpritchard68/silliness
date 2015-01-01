@@ -24,7 +24,7 @@ import math
 def xkcdate(percentage_complete):
     """ Returns the percetange completed, either as a date or a year"""
     today = datetime.date.today()
-    completion = percentage_complete / 100
+    completion = int(percentage_complete) / 100
     days = float(365.25 * (math.exp(3+20.3444*(completion)**3) - math.exp(3)))
     try:
         date = (today - datetime.timedelta(days)).strftime("%A, %d %B %Y")
@@ -41,6 +41,6 @@ def xkcdate(percentage_complete):
 
 if __name__ == "__main__":
     percentage_complete = 0
-    while percentage_complete < 100:
+    while int(percentage_complete) < 100:
         percentage_complete = input("Enter percentage complete: ")
-        print xkcdate(percentage_complete)
+        print (xkcdate(percentage_complete))
