@@ -34,7 +34,7 @@ def roll_dice():
             print "Badly formatted dice string. Try again."
     
     roll_this.set_count(int(count_sides[0:index_d]))
-    roll_this.set_sides(int(count_sides[index_d + 1]))
+    roll_this.set_sides(int(count_sides[index_d + 1:]))
 
     if roll_this.get_count() == 0 and roll_this.get_sides() == 0:
         print "Good bye"
