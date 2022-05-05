@@ -26,21 +26,21 @@ def roll_dice():
 
     index_d = 0
     while index_d < 1: 
-        count_sides = raw_input("Ladies and gentlemen, roll the dice: ")
+        count_sides = input("Ladies and gentlemen, roll the dice: ")
 
         #Check that the form is [number]d[type]
         index_d = count_sides.lower().find("d")
         if index_d  < 1:
-            print "Badly formatted dice string. Try again."
+            print("Badly formatted dice string. Try again.")
     
     roll_this.set_count(int(count_sides[0:index_d]))
     roll_this.set_sides(int(count_sides[index_d + 1:]))
 
     if roll_this.get_count() == 0 and roll_this.get_sides() == 0:
-        print "Good bye"
+        print("Good bye")
         return True
     else:
-        print roll_this.roll_dice()
+        print(roll_this.roll_dice())
         return False
 
 def main():
