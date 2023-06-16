@@ -40,7 +40,8 @@ def roll_dice():
         print("Good bye")
         return True
     else:
-        print(roll_this.roll_dice())
+        dice_rolls = roll_this.roll_dice()
+        print(dice_rolls, sum(dice_rolls))
         return False
 
 def main():
